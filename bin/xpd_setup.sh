@@ -3,13 +3,15 @@
 if [ "$(hostname)" == "xpd1" ]; then
     mariadb -e "SET GLOBAL sql_mode = '';"
     mariadb -e "GRANT ALL ON *.* TO 'importuser'@'%' IDENTIFIED BY 'importuserpasswd';"
-    mariadb -e "CREATE DATABASE bts;"
-    wget -q --show-progress https://sample-columnstore-data.s3.us-west-2.amazonaws.com/flights.sql
+    mariadb -e "CREATE DATABASE IF NOT EXISTS bts;"
+    printf "Downloading data from S3...\n"
+    curl -O --progress-bar https://sample-columnstore-data.s3.us-west-2.amazonaws.com/flights.sql
+    printf "Inserting into Xpand...\n"
     /opt/clustrix/bin/clustrix_import -u importuser -p importuserpasswd -D bts -i flights.sql
     if [ $? -eq 0 ]; then
         printf "Installing Sample Xpand Tables... done\n"
     else
-        echo "Installing Sample Xpand Tables... fail\n"
+        printf "Installing Sample Xpand Tables... fail\n"
         exit 1
     fi
 else
