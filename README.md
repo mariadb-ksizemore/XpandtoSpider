@@ -56,7 +56,7 @@ Open a terminal window and clone the repository:
 5.  `docker exec -it mcs1 bootstrap`
     Prepare the ColumnStore node and set up the sample bts Spider and ColumnStore tables 
 6.  `docker exec -it mcs1 mariadb`
-    Login to ColumnStore MaraiDB 
+    Login to ColumnStore MariaDB 
 7. Start testing Spider Tables and Inserting data into ColumnStore Tables
 
     `INSERT INTO bts.airlines_cs SELECT * FROM bts.airlines_spdr;`
