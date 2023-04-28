@@ -4,8 +4,6 @@
 
 ## Summary
 
-![Xpand to Columnstore with Spider Docker](https://github.com/mariadb-ksizemore/XpandtoSpider/blob/cb48e01e05e9262f00d4da0f984c45f23d502364/XpandtoSpider.png)
-
 ### MariaDB ColumnStore 
 MariaDB ColumnStore is a columnar storage engine that utilizes a massively parallel distributed data architecture. It was built by porting InfiniDB to MariaDB and has been released under the GPL license.
 
@@ -26,6 +24,9 @@ This is a Docker (https://hub.docker.com/r/mariadb/) project to provision MariaD
 
 *   1 **MariaDB Xpand** Distributed SQL Developer image for functional testing
 *   1 **MariaDB Columnstore** MariaDB Columnstore Docker Image with Spider Engine
+
+
+![Xpand to Columnstore with Spider Docker](https://github.com/mariadb-ksizemore/XpandtoSpider/blob/cb48e01e05e9262f00d4da0f984c45f23d502364/XpandtoSpider.png)
 
 ## Requirements
 
