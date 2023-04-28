@@ -35,9 +35,9 @@ Please install the following software packages before you begin.
 *   [Docker](https://www.docker.com/get-started)
 *   [Xpand](https://hub.docker.com/r/mariadb/xpand-single) container image currently supports amd64/x86-64 architecture. Apple M1, ARM, s390x, and others are not supported.
 * Minimum system requirements:
-        6GiB storage
-        2GiB free memory
-        2 CPU cores / threads
+    * 6GiB storage
+    * 2GiB free memory
+    * 2 CPU cores / threads
 
  More information [here](https://hub.docker.com/r/mariadb/xpand-single).
 
