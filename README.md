@@ -48,16 +48,16 @@ Open a terminal window and clone the repository:
 
 1.  `git clone https://github.com/mariadb-ksizemore/XpandtoSpider.git`
 2.  `cd` into the newly cloned folder
-3.  `docker compose up -d`
+3.  `docker compose up -d` <br />  
     to prepare and start the Docker images
-4.  `docker exec -it xpd1 xpd_setup` 
+4.  `docker exec -it xpd1 xpd_setup` <br />  
     Download the sample bts data and import into the Xpand node
     _Note: This may take some time depending on your internet connection and machine size. Expect at least 15 mins to complete this step_
-5.  `docker exec -it mcs1 bootstrap`
+5.  `docker exec -it mcs1 bootstrap` <br />  
     Prepare the ColumnStore node and set up the sample bts Spider and ColumnStore tables 
-6.  `docker exec -it mcs1 mariadb`
+6.  `docker exec -it mcs1 mariadb` <br />  
     Login to ColumnStore MariaDB 
-7. Start testing Spider Tables and Inserting data into ColumnStore Tables
+7. Start testing Spider Tables and Inserting data into ColumnStore Tables <br />  
 
     `INSERT INTO bts.airlines_cs SELECT * FROM bts.airlines_spdr;`
 
