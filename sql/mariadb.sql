@@ -2,11 +2,11 @@ INSTALL SONAME 'ha_spider';
 
 SET GLOBAL sql_mode='';
 
-DROP DATABASE IF EXISTS bts_spdr;
+DROP DATABASE IF EXISTS bts;
 
-CREATE DATABASE bts_spdr;
+CREATE DATABASE bts;
 
-USE bts_spdr;
+USE bts;
 
 
 ## Example of credentials written into Create Table
@@ -75,12 +75,6 @@ CREATE TABLE flights_spdr
      security_delay      SMALLINT,
      late_aircraft_delay SMALLINT
   ) ENGINE=SPIDER COMMENT 'server "xpand1", database "bts", table "flights"';
-
-DROP DATABASE IF EXISTS bts;
-
-CREATE DATABASE bts;
-
-USE bts;
 
 CREATE TABLE airlines_cs
   (
