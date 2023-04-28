@@ -4,6 +4,8 @@
 
 ## Summary
 
+![Xpand to Columnstore with Spider Docker](https://github.com/mariadb-ksizemore/XpandtoSpider/blob/cb48e01e05e9262f00d4da0f984c45f23d502364/XpandtoSpider.png)
+
 ### MariaDB ColumnStore 
 MariaDB ColumnStore is a columnar storage engine that utilizes a massively parallel distributed data architecture. It was built by porting InfiniDB to MariaDB and has been released under the GPL license.
 
@@ -30,13 +32,13 @@ This is a Docker (https://hub.docker.com/r/mariadb/) project to provision MariaD
 Please install the following software packages before you begin.
 
 *   [Docker](https://www.docker.com/get-started)
-*   [Xpand] (https://hub.docker.com/r/mariadb/xpand-single) docker image image currently supports amd64/x86-64 architecture. Apple M1, ARM, s390x, and others are not supported.
+*   [Xpand](https://hub.docker.com/r/mariadb/xpand-single) docker image image currently supports amd64/x86-64 architecture. Apple M1, ARM, s390x, and others are not supported.
 * Minimum system requirements:
         6GiB storage
         2GiB free memory
         2 CPU cores / threads
 
- More information here(https://hub.docker.com/r/mariadb/xpand-single).
+ More information [here](https://hub.docker.com/r/mariadb/xpand-single).
 
 
 ## Instructions:
@@ -56,8 +58,9 @@ Open a terminal window and clone the repository:
 7. Start testing Spider Tables and Inserting data into Columnstore Tables
 
     `INSERT INTO bts.airlines_cs SELECT * FROM bts.airlines_spdr;`
+
     `INSERT INTO bts.airports_cs SELECT * FROM bts.airports_spdr;`
+    
     `INSERT INTO bts.flights_cs SELECT * FROM bts.flights_spdr;`
 
-8. Run Sample Queries in Queries directory to test performance in Columnstore
-(https://github.com/mariadb-ksizemore/XpandtoSpider/tree/master/queries)
+8. Run [sample queries](https://github.com/mariadb-ksizemore/XpandtoSpider/tree/master/queries) in Queries directory to test performance in Columnstore
