@@ -25,7 +25,6 @@ services:
     hostname: ${XPD1}
     container_name: ${XPD1}
     volumes:
-      - ${PWD}/data/bts.sql:/tmp/data/bts.sql
       - ${PWD}/bin/xpd_setup.sh:/usr/bin/xpd_setup
     env_file:
       - .env
