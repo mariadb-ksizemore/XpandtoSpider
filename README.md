@@ -26,7 +26,7 @@ This is a [Docker](https://hub.docker.com/r/mariadb/) project to provision Maria
 *   1 **MariaDB Columnstore** MariaDB Columnstore Container with Spider Engine
 
 
-![Xpand to Columnstore with Spider Docker](https://github.com/mariadb-ksizemore/XpandtoSpider/blob/cb48e01e05e9262f00d4da0f984c45f23d502364/XpandtoSpider.png)
+![Xpand to Columnstore with Spider Docker](https://github.com/mariadb-ksizemore/XpandtoSpider/blob/21a116a08006bfb74cfdde5429bbde0e75ba1a18/XpandtoSpider.png)
 
 ## Requirements
 
