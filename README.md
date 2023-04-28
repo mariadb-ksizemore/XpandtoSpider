@@ -20,20 +20,20 @@ MariaDB Xpand supports ACID-compliant distributed SQL for modern web application
 
 
 
-This is a [Docker](https://hub.docker.com/r/mariadb/) project to provision MariaDB Xpand and MariaDB Columnstore with Spider Engine:
+This is a [Docker](https://hub.docker.com/r/mariadb/) project to provision MariaDB Xpand and MariaDB ColumnStore with Spider Engine:
 
 *   1 **MariaDB Xpand** Distributed SQL Developer Container for functional testing
-*   1 **MariaDB Columnstore** MariaDB Columnstore Container with Spider Engine
+*   1 **MariaDB ColumnStore** MariaDB ColumnStore Container with Spider Engine
 
 
-![Xpand to Columnstore with Spider Docker](https://github.com/mariadb-ksizemore/XpandtoSpider/blob/21a116a08006bfb74cfdde5429bbde0e75ba1a18/XpandtoSpider.png)
+![Xpand to ColumnStore with Spider Docker](https://github.com/mariadb-ksizemore/XpandtoSpider/blob/21a116a08006bfb74cfdde5429bbde0e75ba1a18/XpandtoSpider.png)
 
 ## Requirements
 
 Please install the following software packages before you begin.
 
 *   [Docker](https://www.docker.com/get-started)
-*   [Xpand](https://hub.docker.com/r/mariadb/xpand-single) container image currently supports amd64/x86-64 architecture. Apple M1, ARM, s390x, and others are not supported.
+*   [Xpand](https://hub.docker.com/r/mariadb/xpand-single) container image currently only supports amd64/x86-64 architecture. 
 * Minimum system requirements:
     * 6GiB storage
     * 2GiB free memory
@@ -54,10 +54,10 @@ Open a terminal window and clone the repository:
     Download the sample bts data and import into the Xpand node
     _Note: This may take some time depending on your internet connection and machine size. Expect at least 15 mins to complete this step_
 5.  `docker exec -it mcs1 bootstrap`
-    Prepare the Columnstore node and set up the sample bts Spider and Columnstore tables 
+    Prepare the ColumnStore node and set up the sample bts Spider and ColumnStore tables 
 6.  `docker exec -it mcs1 mariadb`
-    Login to Columnstore MaraiDB 
-7. Start testing Spider Tables and Inserting data into Columnstore Tables
+    Login to ColumnStore MaraiDB 
+7. Start testing Spider Tables and Inserting data into ColumnStore Tables
 
     `INSERT INTO bts.airlines_cs SELECT * FROM bts.airlines_spdr;`
 
@@ -65,4 +65,4 @@ Open a terminal window and clone the repository:
     
     `INSERT INTO bts.flights_cs SELECT * FROM bts.flights_spdr;`
 
-8. Run [sample queries](https://github.com/mariadb-ksizemore/XpandtoSpider/tree/master/queries) in Queries directory to test performance in Columnstore
+8. Run [sample queries](https://github.com/mariadb-ksizemore/XpandtoSpider/tree/master/queries) in Queries directory to test performance in ColumnStore
