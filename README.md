@@ -1,6 +1,6 @@
 ![MariaDB](https://mariadb.com/wp-content/uploads/2019/11/mariadb-logo_blue-transparent.png)
 
-### MariaDB Distributed SQL to Analytics with Spider Engine Demo 
+## MariaDB Distributed SQL to Analytics with Spider Engine Demo 
 
 ## Summary
 
