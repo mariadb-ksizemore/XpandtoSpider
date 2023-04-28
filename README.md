@@ -22,8 +22,8 @@ MariaDB Xpand supports ACID-compliant distributed SQL for modern web application
 
 This is a [Docker](https://hub.docker.com/r/mariadb/) project to provision MariaDB Xpand and MariaDB Columnstore with Spider Engine:
 
-*   1 **MariaDB Xpand** Distributed SQL Developer image for functional testing
-*   1 **MariaDB Columnstore** MariaDB Columnstore Docker Image with Spider Engine
+*   1 **MariaDB Xpand** Distributed SQL Developer Container for functional testing
+*   1 **MariaDB Columnstore** MariaDB Columnstore Container with Spider Engine
 
 
 ![Xpand to Columnstore with Spider Docker](https://github.com/mariadb-ksizemore/XpandtoSpider/blob/cb48e01e05e9262f00d4da0f984c45f23d502364/XpandtoSpider.png)
@@ -33,7 +33,7 @@ This is a [Docker](https://hub.docker.com/r/mariadb/) project to provision Maria
 Please install the following software packages before you begin.
 
 *   [Docker](https://www.docker.com/get-started)
-*   [Xpand](https://hub.docker.com/r/mariadb/xpand-single) docker image image currently supports amd64/x86-64 architecture. Apple M1, ARM, s390x, and others are not supported.
+*   [Xpand](https://hub.docker.com/r/mariadb/xpand-single) container image currently supports amd64/x86-64 architecture. Apple M1, ARM, s390x, and others are not supported.
 * Minimum system requirements:
         6GiB storage
         2GiB free memory
@@ -51,7 +51,7 @@ Open a terminal window and clone the repository:
 3.  `docker compose up -d`
     to prepare and start the Docker images
 4.  `docker exec -it xpd1 xpd_setup` 
-    Download the sample bts data and import into the Xpand Docker node
+    Download the sample bts data and import into the Xpand node
     _Note: This may take some time depending on your internet connection and machine size. Expect at least 15 mins to complete this step_
 5.  `docker exec -it mcs1 bootstrap`
     Prepare the Columnstore node and set up the sample bts Spider and Columnstore tables 
