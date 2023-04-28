@@ -20,7 +20,7 @@ MariaDB Spider Engine creates "virtual" Spider Tables on a Spider enabled node t
 
 
 
-This is a Docker (https://hub.docker.com/r/mariadb/) project to provision MariaDB Xpand and MariaDB Columnstore with Spider Engine:
+This is a Docker(https://hub.docker.com/r/mariadb/) project to provision MariaDB Xpand and MariaDB Columnstore with Spider Engine:
 
 *   1 **MariaDB Xpand** Distributed SQL Developer image for functional testing
 *   1 **MariaDB Columnstore** MariaDB Columnstore Docker Image with Spider Engine
