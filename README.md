@@ -47,9 +47,10 @@ Please install the following software packages before you begin.
 Open a terminal window and clone the repository:
 
 1.  Clone this project. <br />  
-`git clone https://github.com/mariadb-ksizemore/XpandtoSpider.git`
+    `git clone https://github.com/mariadb-ksizemore/XpandtoSpider.git`
 
-2.  `cd` into the newly cloned folder
+2.  Change directory into the newly cloned folder <br />  
+    `cd XpandtoSpider`
 
 3.  Prepare and start the Docker containers <br />  
     `docker compose up -d` 
@@ -65,7 +66,7 @@ Open a terminal window and clone the repository:
 6.  Login to ColumnStore MariaDB <br />  
     `docker exec -it mcs1 mariadb`
     
-7. Start testing Spider Tables and Inserting data into ColumnStore Tables <br />  
+7.  Start testing Spider Tables and Inserting data into ColumnStore Tables <br />  
 
     `INSERT INTO bts.airlines_cs SELECT * FROM bts.airlines_spdr;`
 
