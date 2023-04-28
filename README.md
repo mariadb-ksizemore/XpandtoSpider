@@ -52,6 +52,7 @@ Open a terminal window and clone the repository:
     to prepare and start the Docker images
 4.  `docker exec -it xpd1 xpd_setup` 
     Download the sample bts data and import into the Xpand Docker node
+    _Note: This may take some time depending on your internet connection and machine size. Expect at least 15 mins to complete this step_
 5.  `docker exec -it mcs1 bootstrap`
     Prepare the Columnstore node and set up the sample bts Spider and Columnstore tables 
 6.  `docker exec -it mcs1 mariadb`
