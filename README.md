@@ -47,24 +47,24 @@ Please install the following software packages before you begin.
 Open a terminal window and clone the repository:
 
 1.  Clone this project. <br />  
-    `git clone https://github.com/mariadb-ksizemore/XpandtoSpider.git`
+    `git clone https://github.com/mariadb-ksizemore/XpandtoSpider.git`  <br />  
 
 2.  Change directory into the newly cloned folder <br />  
-    `cd XpandtoSpider`
+    `cd XpandtoSpider`  <br />  
 
 3.  Prepare and start the Docker containers <br />  
-    `docker compose up -d` 
+    `docker compose up -d`   <br />  
     
 4.  Download the sample bts data and import into the Xpand node <br />  
     `docker exec -it xpd1 xpd_setup` 
     
-    _Note: This may take some time depending on your internet connection and machine size. Expect at least 15 mins to complete this step_
+    _Note: This may take some time depending on your internet connection and machine size. Expect at least 15 mins to complete this step_  <br />  
 
 5.  Prepare the ColumnStore node and set up the sample bts Spider and ColumnStore tables <br \>  
-    `docker exec -it mcs1 bootstrap`  
+    `docker exec -it mcs1 bootstrap`   <br />  
 
 6.  Login to ColumnStore MariaDB <br />  
-    `docker exec -it mcs1 mariadb`
+    `docker exec -it mcs1 mariadb`  <br />  
     
 7.  Start testing Spider Tables and Inserting data into ColumnStore Tables <br />  
 
@@ -72,6 +72,6 @@ Open a terminal window and clone the repository:
 
     `INSERT INTO bts.airports_cs SELECT * FROM bts.airports_spdr;`
     
-    `INSERT INTO bts.flights_cs SELECT * FROM bts.flights_spdr;`
+    `INSERT INTO bts.flights_cs SELECT * FROM bts.flights_spdr;` <br />  
 
 8. Run [sample queries](https://github.com/mariadb-ksizemore/XpandtoSpider/tree/master/queries) in Queries directory to test performance in ColumnStore
